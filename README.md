@@ -1,89 +1,25 @@
-# What's Ruby
+## What is the Berry language???
 
-Ruby is the interpreted scripting language for quick and easy object-oriented
-programming.  It has many features to process text files and to do system
-management tasks (as in Perl).  It is simple, straight-forward, and
-extensible.
+Berry is a simple, reliable and straightforward fork of Ruby, with similar features and more. It's extremely portable (works on Windows, OSX and many other OS's), it has a simple syntax and is frequently updated.
 
-## Features of Ruby
+Can I contribute?
+YES! If you want to update anything, or do anything, please work your magic! We will usually accept your requests, as long as the change you make is worth while, and makes sense. One of the reasons we created this was to pull the language in a similar but different, open direction to ruby.
 
-*   Simple Syntax
-*   **Normal** Object-oriented Features (e.g. class, method calls)
-*   **Advanced** Object-oriented Features (e.g. Mix-in, Singleton-method)
-*   Operator Overloading
-*   Exception Handling
-*   Iterators and Closures
-*   Garbage Collection
-*   Dynamic Loading of Object Files (on some architectures)
-*   Highly Portable (works on many Unix-like/POSIX compatible platforms as
-    well as Windows, Mac OS X, BeOS, etc.) cf.
-    http://bugs.ruby-lang.org/projects/ruby-trunk/wiki/SupportedPlatforms
+How do I install Berry?
+*
+Please note that if you want to use Visual C++ to compile Berry, read win32/README.win32 instead.
+You may also have to be a super user for installation to work.
+*
 
-
-## How to get Ruby
-
-For a complete list of ways to install Ruby, including using third-party tools
-like rvm, see:
-
-http://www.ruby-lang.org/en/downloads/
-
-The Ruby distribution files can be found on the following FTP site:
-
-ftp://ftp.ruby-lang.org/pub/ruby/
-
-The trunk of the Ruby source tree can be checked out with the following
-command:
-
-    $ svn co http://svn.ruby-lang.org/repos/ruby/trunk/ ruby
-
-Or if you are using git then use the following command:
-
-    $ git clone git://github.com/ruby/ruby.git
-
-There are some other branches under development.  Try the following command
-to see the list of branches:
-
-    $ svn ls http://svn.ruby-lang.org/repos/ruby/branches/
-
-Or if you are using git then use the following command:
-
-    $ git ls-remote git://github.com/ruby/ruby.git
-
-## Ruby home page
-
-The URL of the Ruby home page is:
-
-http://www.ruby-lang.org/
-
-## Mailing list
-
-There is a mailing list to talk about Ruby. To subscribe this list, please
-send the following phrase:
-
-    subscribe
-
-in the mail body (not subject) to the address
-<mailto:ruby-talk-request@ruby-lang.org>.
-
-## How to compile and install
-
-This is what you need to do to compile and install Ruby:
-
-1.  If you want to use Microsoft Visual C++ to compile ruby, read
-    win32/README.win32 instead of this document.
-
-2.  If `./configure` does not exist or is older than configure.in, run
-    autoconf to (re)generate configure.
-
-3.  Run `./configure`, which will generate config.h and Makefile.
+1.  Run `./configure`, which will generate config.h and Makefile.
 
     Some C compiler flags may be added by default depending on your
     environment.  Specify `optflags=..` and `warnflags=..` as necessary to
     override them.
 
-4.  Edit `defines.h` if you need. Usually this step will not be needed.
+2.  Edit `defines.h` if you need. Usually this step will not be needed.
 
-5.  Remove comment mark(`#`) before the module names from `ext/Setup` (or add
+3.  Remove comment mark(`#`) before the module names from `ext/Setup` (or add
     module names if not present), if you want to link modules statically.
 
     If you don't want to compile non static extension modules (probably on
@@ -92,16 +28,15 @@ This is what you need to do to compile and install Ruby:
 
     Usually this step will not be needed.
 
-6.  Run `make`.
+4.  Run `make`.
 
-7.  Optionally, run '`make check`' to check whether the compiled Ruby
+5.  Optionally, run '`make check`' to check whether the compiled Ruby
     interpreter works well. If you see the message "`check succeeded`", your
     ruby works as it should (hopefully).
 
-8.  Run '`make install`'
+6.  Run '`make install`'
 
-    This command will create following directories and install files onto
-    them.
+    This command will create the following directories and install into them.
 
     *   `${DESTDIR}${prefix}/bin`
     *   `${DESTDIR}${prefix}/include/ruby-${MAJOR}.${MINOR}.${TEENY}`
@@ -121,44 +56,7 @@ This is what you need to do to compile and install Ruby:
     *   `${DESTDIR}${prefix}/share/ri/${MAJOR}.${MINOR}.${TEENY}/system`
 
 
-    If Ruby's API version is '*x.y.z*', the `${MAJOR}` is '*x*', the
-    `${MINOR}` is '*y*', and the `${TEENY}` is '*z*'.
-
-    **NOTE**: teeny of the API version may be different from one of Ruby's
-    program version
-
-    You may have to be a super user to install ruby.
-
-
-If you fail to compile ruby, please send the detailed error report with the
-error log and machine/OS type, to help others.
-
-Some extension libraries may not get compiled because of lack of necessary
-external libraries and/or headers, then you will need to run '`make distclean-ext`'
-to remove old configuration after installing them in such case.
 
 ## Copying
 
 See the file `COPYING`.
-
-## Feedback
-
-Questions about the Ruby language can be asked on the Ruby-Talk mailing list
-(http://www.ruby-lang.org/en/community/mailing-lists) or on websites like
-(http://stackoverflow.com).
-
-Bug reports should be filed at http://bugs.ruby-lang.org. Read [HowToReport] for more information.
-
-[HowToReport]: https://bugs.ruby-lang.org/projects/ruby/wiki/HowToReport
-
-##Contributing
-
-See the file `CONTRIBUTING.md`
-
-
-## The Author
-
-Ruby was originally designed and developed by Yukihiro Matsumoto (Matz) in
-1995.
-
-<mailto:matz@ruby-lang.org>
